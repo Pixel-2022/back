@@ -105,12 +105,10 @@ router.route('/login')
         const smtpTransport = nodemailer.createTransport({
           service: "naver",
           host: "smtp.naver.com",
-          port: 465,
-          secure:false,
-          requireTLS:true,
+          port: 587,
           auth: {
-              user: "lip0603@naver.com",
-              pass: "RM9H1SHPS5R5"
+              user: "pixel0317@naver.com",
+              pass: "pixel03170506"
           },
           tls: {
               rejectUnauthorized: false
@@ -124,7 +122,7 @@ router.route('/login')
       }
 
         const mailOptions = {
-          from: 'PIXEL',
+          from: 'pixel0317@naver.com',
           to: req.body.email,
           subject: '[수락:손의 즐거움] 회원가입 인증 메일입니다.',
           text: '오른쪽 인증번호를 입력해주세요 : ' + Checking
